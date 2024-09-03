@@ -45,7 +45,7 @@ item.delete();
 // 首先透過合集包id取得合集包
 let testPack = game.packs.get("dnd5e_classpack.itempack");
 // 然後透過物品id取得物品
-let testItem = testPack.getDocument("A8FA9E9D797EC9FB");
+let testItem = await testPack.getDocument("A8FA9E9D797EC9FB");
 ```
 
 ## 使用插件
