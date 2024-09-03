@@ -56,6 +56,8 @@ let test = actor;
 let testitem=game.items.get("B1QGodNijs2Ro5Ie");
 // 新增物品到角色
 test.createEmbeddedDocuments("Item", [testitem.toObject()])
+// 刪除聊天室的按鈕訊息
+optional.message.delete();
 // 移除原本的物品
 item.delete();
 ```
