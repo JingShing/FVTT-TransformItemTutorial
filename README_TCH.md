@@ -5,6 +5,7 @@ English | [繁體中文](README_TCH.md)
 ## 範例
 
 ![example](img/example.gif)
+![exmple2](img/example2.gif)
 
 ## 可選安裝插件
 
