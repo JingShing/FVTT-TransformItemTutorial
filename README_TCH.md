@@ -1,62 +1,62 @@
 English | [繁體中文](README_TCH.md)
 
-# FoundryVTT Item Transform Macro Tutorial
+# FoundryVTT 物品轉換腳本
 
-## Example
+## 範例
 
 ![example](img/example.gif)
 
-## Module-Optional
+## 可選安裝插件
 
 * [Scriptable Items]([Scriptable Items for dnd5e | Foundry Virtual Tabletop (foundryvtt.com)](https://foundryvtt.com/packages/scriptable-items))
 
-## Base Script
+## 基礎腳本
 
-> If you don't want to use module to do it
+> 如果你不想安裝額外的插件
 
-### add item to actor
+### 新增物品到角色
 
 ```js
-// get a actor called test
+// 取得叫做 test 的角色
 let test =game.actors.getName("test");
-// get item id called XD3kQ0JxvPDamH2m
+// 取得 id 為 XD3kQ0JxvPDamH2m 的物品
 let testitem=game.items.get("XD3kQ0JxvPDamH2m");
-// add item to actor
+// 新增此物品到角色
 test.createEmbeddedDocuments("Item", [testitem.toObject()])
 ```
 
-### delete item from actor
+### 將特定物品從角色移除
 
 ```js
-// get item in actor
+// 請自行寫取得特定物品的方法，在此省略
 let item;
-// using delete function to removed item from actor
+// 直接使用 delete() 方法來從角色身上刪除道具
 item.delete();
 ```
 
-## With module
-### How to setup
+## 使用插件
+### 怎麼設定？
 
-* Create item
-* Click "scriptable item" button on top
+* 創建物品
+* 點物品上方的 "scriptable item" 按鈕
   * ![script_item](img/script_item.png)
-* It will open a edit page
+* 開啟編輯頁面
   * ![edit](img/edit.png)
-* add triggers with button
+* 新增觸發方式
   * ![button](img/button.png)
-* add script
+* 新增腳本
   * ![add_script](img/add_script.png)
 
-### Script
+### 腳本
 
 ```js
-// get actor
+// 取得角色
 let test = actor;
-// item you wanna transform
+// 取得你想轉換成的物品id的物品
 let testitem=game.items.get("B1QGodNijs2Ro5Ie");
-// add item to actor
+// 新增物品到角色
 test.createEmbeddedDocuments("Item", [testitem.toObject()])
-// remove original item
+// 移除原本的物品
 item.delete();
 ```
 
