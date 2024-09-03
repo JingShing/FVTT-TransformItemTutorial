@@ -56,6 +56,8 @@ let test = actor;
 let testitem=game.items.get("B1QGodNijs2Ro5Ie");
 // add item to actor
 test.createEmbeddedDocuments("Item", [testitem.toObject()])
+// delete chat room button message generated from this script
+optional.message.delete();
 // remove original item
 item.delete();
 ```
