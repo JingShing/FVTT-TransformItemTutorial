@@ -45,7 +45,7 @@ item.delete();
 // first get pack
 let testPack = game.packs.get("dnd5e_classpack.itempack");
 // then use id to find item
-let testItem = testPack.getDocument("A8FA9E9D797EC9FB");
+let testItem = await testPack.getDocument("A8FA9E9D797EC9FB");
 ```
 
 ## With module
