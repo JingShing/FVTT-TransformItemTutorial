@@ -35,6 +35,19 @@ let item;
 item.delete();
 ```
 
+### get item from compendium
+```js
+// id format: Compendium.dnd5e_classpack.itempack.Item.A8FA9E9D797EC9FB
+// removed Compendium
+// dnd5e_classpack.itempack is pack id
+// A8FA9E9D797EC9FB is item id
+
+// first get pack
+let testPack = game.packs.get("dnd5e_classpack.itempack");
+// then use id to find item
+let testItem = testPack.getDocument("A8FA9E9D797EC9FB");
+```
+
 ## With module
 ### How to setup
 
