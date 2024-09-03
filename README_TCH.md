@@ -35,6 +35,19 @@ let item;
 item.delete();
 ```
 
+### 從合集包取得物品
+```js
+// id 格式: Compendium.dnd5e_classpack.itempack.Item.A8FA9E9D797EC9FB
+// 去除 Compendium 前綴
+// dnd5e_classpack.itempack 是合集包id
+// A8FA9E9D797EC9FB 是物品 id
+
+// 首先透過合集包id取得合集包
+let testPack = game.packs.get("dnd5e_classpack.itempack");
+// 然後透過物品id取得物品
+let testItem = testPack.getDocument("A8FA9E9D797EC9FB");
+```
+
 ## 使用插件
 ### 怎麼設定？
 
