@@ -68,11 +68,11 @@ let testItem = await testPack.getDocument("A8FA9E9D797EC9FB");
 
 ```js
 // get actor
-let test = actor;
+let cActor = actor;
 // item you wanna transform
-let testitem=game.items.get("B1QGodNijs2Ro5Ie");
+let giveItem=game.items.get("B1QGodNijs2Ro5Ie");
 // add item to actor
-test.createEmbeddedDocuments("Item", [testitem.toObject()])
+cActor.createEmbeddedDocuments("Item", [giveItem.toObject()])
 // delete chat room button message generated from this script
 optional.message.delete();
 // remove original item
