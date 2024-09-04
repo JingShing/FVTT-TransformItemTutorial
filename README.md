@@ -88,7 +88,7 @@ item.delete();
 * Create item
   * ![itemPage](img/ItemPage.png)
 * Click "active effect" button on top
-  * ![effect_page](img/active_effect.png)
+  * ![effect_page](img/activeEffect.png)
 * setting effect pause and transfer effect to actor, and your effect name
   * Especially effect name as my script is based on effect name
   * ![edit_effect](img/effect_set.png)
