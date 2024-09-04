@@ -49,7 +49,7 @@ let testPack = game.packs.get("dnd5e_classpack.itempack");
 let testItem = await testPack.getDocument("A8FA9E9D797EC9FB");
 ```
 
-## With module
+## With module-Scriptable Items
 ### How to setup
 
 * Create item
