@@ -87,7 +87,7 @@ item.delete();
 * 創建道具
   * ![itemPage](img/ItemPage.png)
 * 點擊道具上方的 "主動效果" 按鈕
-  * ![effect_page](img/active_effect.png)
+  * ![effect_page](img/activeEffect.png)
 * 設定暫停效果和轉移效果給裝備角色，還有記得改好效果名稱
   * 效果名稱很重要，腳本會基於效果名稱來設定
   * ![edit_effect](img/effect_set.png)
