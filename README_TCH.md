@@ -78,3 +78,58 @@ optional.message.delete();
 item.delete();
 ```
 
+## 使用插件-Dynamic Active Effects
+### 參考資料
+[Dynamic Active Effects 說明](https://gitlab.com/tposney/dae)
+### 如何設定
+
+* 創建道具
+  * ![itemPage](img/ItemPage.png)
+* 點擊道具上方的 "主動效果" 按鈕
+  * ![effect_page](img/active_effect.png)
+* 設定暫停效果和轉移效果給裝備角色，還有記得改好效果名稱
+  * 效果名稱很重要，腳本會基於效果名稱來設定
+  * ![edit_effect](img/effect_set.png)
+* 設定效果屬性為 ```macro.itemMacro```
+  * ![edit_effect2](img/effect_set_2.png)
+* 新增腳本
+  * 在物品頁面點擊上方的 "DIME" 按鈕
+  * ![DIME](img/DIME.png)
+
+### Script
+
+```js
+// 當效果開啟才觸發
+if(args[0]=="on"){
+// 取得最後的參數-> 最後的參數有我們需要的許多參數
+let cArgs = args[args.length-1];
+// 取得裝備或持有此道具的角色
+let cActor = fromUuidSync(cArgs.actorUuid);
+// 取得觸發效果的物品
+let cItem = cArgs.item;
+// 取得效果名稱
+let cEfName = cArgs.efData.name;
+
+let giveItemId = "";
+// 下面的狀態中，如果狀態叫做 "A"
+// 則物品會被轉換為 道具A
+if(cEfName==="A"){
+// 取得你要的物品ID替換掉"道具Aid"
+giveItemId="道具Aid";
+}
+
+if(cEfName==="B"){
+giveItemId="itemBid";
+}
+
+// 如果有正確觸發效果，則會給角色轉換後的道具，並刪除原本的道具
+if(giveItemId!==""){
+// 取得轉換後道具
+let giveItem=game.items.get(giveItemId);
+// 將道具給角色
+cActor.createEmbeddedDocuments("Item", [giveItem.toObject()])
+// 去除原本道具
+cItem .delete();
+}
+}
+```
