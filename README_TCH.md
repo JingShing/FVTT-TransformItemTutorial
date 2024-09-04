@@ -5,6 +5,10 @@
 ## 範例
 ### Scriptable Items
 ![example](img/example.gif)
+### Scriptable Items with dialog
+![button_dialog](img/button_dialog.png)
+
+![dialog_select](img/dialog_select.png)
 ### Dynamic Active Effects
 ![example_dae](img/example_dae.gif)
 ## 可選安裝插件
@@ -77,6 +81,40 @@ cActor.createEmbeddedDocuments("Item", [giveItem.toObject()])
 optional.message.delete();
 // 移除原本的物品
 item.delete();
+```
+
+## 使用插件和彈窗-Scriptable Items
+使用 "Scriptable Items" 的設置。
+
+更改腳本。
+### 腳本。
+
+```js
+new Dialog({
+  // 選單標題設置
+  title: "變形選擇選單",
+  // 在這裡放說明文字
+  content: "這裡是變形說明文字",
+  // 設定底下的各種按鈕，這些按鈕用來選擇要變形成什麼
+  buttons: {
+    button1: {
+      // 這顆按鈕叫 "變形A"，到時候按鈕上會顯示這些字
+      label: "變形A",
+      callback: () => {
+      // 這裡放給角色物品、刪除原物品、刪除按鈕對話的代碼，可以參考其他代碼來寫
+      // 這些代碼是用來給按鈕使用的
+)},
+      // 可以在這設定按鈕的 icon
+      icon: `<i class="fas fa-check"></i>`
+    },
+    button2: {
+      label: "變形B",
+      callback: () => {
+},
+      icon: `<i class="fas fa-times"></i>`
+    }
+  }
+}).render(true);
 ```
 
 ## 使用插件-Dynamic Active Effects
