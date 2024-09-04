@@ -78,3 +78,58 @@ optional.message.delete();
 item.delete();
 ```
 
+## With module-Dynamic Active Effects
+### Reference
+[Dynamic Active Effects Instruction](https://gitlab.com/tposney/dae)
+### How to setup
+
+* Create item
+  * ![itemPage](img/ItemPage.png)
+* Click "active effect" button on top
+  * ![effect_page](img/active_effect.png)
+* setting effect pause and transfer effect to actor, and your effect name
+  * Especially effect name as my script is based on effect name
+  * ![edit_effect](img/effect_set.png)
+* setting effect attribute to ```macro.itemMacro```
+  * ![edit_effect2](img/effect_set_2.png)
+* add script
+  * back to item page click "DIME" button on top
+  * ![DIME](img/DIME.png)
+
+### Script
+
+```js
+// when effect turn on it trigger
+if(args[0]=="on"){
+// get last args-> last args contains multiple args we need
+let cArgs = args[args.length-1];
+// get actor equipped or held item
+let cActor = fromUuidSync(cArgs.actorUuid);
+// get item triggered effect
+let cItem = cArgs.item;
+// get effect name
+let cEfName = cArgs.efData.name;
+
+let giveItemId = "";
+// if effect name called "A"
+// then item will be transform into itemA
+if(cEfName==="A"){
+// get itemA id and replace it
+giveItemId="itemAid";
+}
+
+if(cEfName==="B"){
+giveItemId="itemBid";
+}
+
+// if get right effect name then give player item and delete triggered item
+if(giveItemId!==""){
+// get transfromed item
+let giveItem=game.items.get(giveItemId);
+// add item to actor
+cActor.createEmbeddedDocuments("Item", [giveItem.toObject()])
+// removed original item
+cItem .delete();
+}
+}
+```
