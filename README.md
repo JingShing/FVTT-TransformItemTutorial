@@ -6,6 +6,10 @@ English | [繁體中文](README_TCH.md)
 
 ### Scriptable Items
 ![example](img/example.gif)
+### Scriptable Items with dialog
+![button_dialog](img/button_dialog.png)
+
+![dialog_select](img/dialog_select.png)
 ### Dynamic Active Effects
 ![example_dae](img/example_dae.gif)
 ## Module-Optional
@@ -78,6 +82,40 @@ cActor.createEmbeddedDocuments("Item", [giveItem.toObject()])
 optional.message.delete();
 // remove original item
 item.delete();
+```
+
+## With module using dialog-Scriptable Items
+Using "Scriptable Items" setup.
+
+Change the script;
+### Script
+
+```js
+new Dialog({
+  // put menu title here
+  title: "Transform select menu",
+  // put instruction in here
+  content: "This is transfrom instructions",
+  // setting buttons also selection in below
+  buttons: {
+    button1: {
+      // this is button called "A"
+      label: "A",
+      callback: () => {
+      // put code give item, select item and delete message in here
+      // here is how button work so just put code in here area
+)},
+      // setting icon here
+      icon: `<i class="fas fa-check"></i>`
+    },
+    button2: {
+      label: "B",
+      callback: () => {
+},
+      icon: `<i class="fas fa-times"></i>`
+    }
+  }
+}).render(true);
 ```
 
 ## With module-Dynamic Active Effects
