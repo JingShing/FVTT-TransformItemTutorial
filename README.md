@@ -50,6 +50,8 @@ let testItem = await testPack.getDocument("A8FA9E9D797EC9FB");
 ```
 
 ## With module-Scriptable Items
+### Reference
+[scriptable Items Instruction](https://github.com/FurtherV/scriptable-items)
 ### How to setup
 
 * Create item
