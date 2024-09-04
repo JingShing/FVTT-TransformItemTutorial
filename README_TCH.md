@@ -49,7 +49,7 @@ let testPack = game.packs.get("dnd5e_classpack.itempack");
 let testItem = await testPack.getDocument("A8FA9E9D797EC9FB");
 ```
 
-## 使用插件
+## 使用插件-Scriptable Items
 ### 怎麼設定？
 
 * 創建物品
