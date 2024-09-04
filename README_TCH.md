@@ -68,11 +68,11 @@ let testItem = await testPack.getDocument("A8FA9E9D797EC9FB");
 
 ```js
 // 取得角色
-let test = actor;
+let cActor = actor;
 // 取得你想轉換成的物品id的物品
-let testitem=game.items.get("B1QGodNijs2Ro5Ie");
+let giveItem=game.items.get("B1QGodNijs2Ro5Ie");
 // 新增物品到角色
-test.createEmbeddedDocuments("Item", [testitem.toObject()])
+cActor.createEmbeddedDocuments("Item", [giveItem.toObject()])
 // 刪除聊天室的按鈕訊息
 optional.message.delete();
 // 移除原本的物品
