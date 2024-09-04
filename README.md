@@ -4,8 +4,10 @@ English | [繁體中文](README_TCH.md)
 
 ## Example
 
+### Scriptable Items
 ![example](img/example.gif)
-
+### Dynamic Active Effects
+![example_dae](img/example_dae.gif)
 ## Module-Optional
 
 * [Scriptable Items](https://foundryvtt.com/packages/scriptable-items)
