@@ -50,6 +50,8 @@ let testItem = await testPack.getDocument("A8FA9E9D797EC9FB");
 ```
 
 ## 使用插件-Scriptable Items
+### 參考資料
+[scriptable Items 說明](https://github.com/FurtherV/scriptable-items)
 ### 怎麼設定？
 
 * 創建物品
