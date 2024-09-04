@@ -3,9 +3,10 @@ English | [繁體中文](README_TCH.md)
 # FoundryVTT 物品轉換腳本
 
 ## 範例
-
+### Scriptable Items
 ![example](img/example.gif)
-
+### Dynamic Active Effects
+![example_dae](img/example_dae.gif)
 ## 可選安裝插件
 
 * [Scriptable Items](https://foundryvtt.com/packages/scriptable-items)
