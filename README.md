@@ -9,7 +9,8 @@ English | [繁體中文](README_TCH.md)
 
 ## Module-Optional
 
-* [Scriptable Items]([Scriptable Items for dnd5e | Foundry Virtual Tabletop (foundryvtt.com)](https://foundryvtt.com/packages/scriptable-items))
+* [Scriptable Items](https://foundryvtt.com/packages/scriptable-items)
+* [Dynamic Active Effects](https://foundryvtt.com/packages/dae)
 
 ## Base Script
 
