@@ -1,4 +1,4 @@
-English | [繁體中文](README_TCH.md)
+[English](README.md) | 繁體中文
 
 # FoundryVTT 物品轉換腳本
 
